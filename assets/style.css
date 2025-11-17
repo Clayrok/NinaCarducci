@@ -1,11 +1,44 @@
+@font-face {
+	font-family: 'Spectral';
+	src: url('./fonts/Spectral-Regular.ttf') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Spectral';
+	src: url('./fonts/Spectral-Italic.ttf') format('ttf');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+* {
+	position: relative;
+	font-family: 'Inter';
+	font-style: normal;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
 body {
 	max-width: 1920px;
 	margin: auto;
 }
-* {
-	font-family: 'Inter';
-	font-style: normal;
+
+blockquote {
+	margin: 0 0 1rem;
 }
+
+.pointer {
+	cursor: pointer;
+}
+
+.differed-img {
+	visibility: hidden;
+}
+
 .top-header {
 	background-color: white;
 	position: sticky;
@@ -20,6 +53,8 @@ body {
 
 .top-header .name {
 	font-size: 26px;
+	font-weight: 500;
+	margin: 0;
 }
 
 .nav ul {
@@ -42,6 +77,65 @@ body {
 	width: 20px;
 }
 
+.carousel-inner {
+	display: flex;
+	overflow: hidden;
+}
+
+.carousel-item {
+	display: flex;
+	width: 100%;
+}
+
+.carousel-indicators {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	z-index: 1;
+	transform: translateX(-50%);
+	margin-bottom: 1rem;
+}
+
+.carousel-indicators button {
+	border-radius: 0;
+	border: 0;
+	width: 30px;
+	height: 3px;
+	margin-left: 3px;
+	margin-right: 3px;
+	opacity: 50%;
+	background: white;
+}
+
+.carousel-indicators button.active {
+	opacity: 100%;
+}
+
+button[class^="carousel-control"] {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 15%;
+	background: none;
+	border: 0;
+	color: white;
+	opacity: 50%;
+}
+
+button[class^="carousel-control"] > img {
+	height: 3.5rem;
+	pointer-events: none;
+	filter: invert(1);
+}
+
+.carousel-control-prev {
+	left: 0;
+}
+
+.carousel-control-next {
+	right: 0;
+}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -62,6 +156,7 @@ body {
 }
 
 .picture {
+	position: unset;
 	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
@@ -69,59 +164,68 @@ body {
 
 .picture img {
 	width: 100%;
-
 }
+
 #about-me {
 	flex: 2
 }
+
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 30px;
+	font-weight: 500;
 }
+
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
 }
+
 #about-me p {
 	width: 80%;
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
-
 .title{
 	text-align: center;
 	padding-block: 2em;
+	font-size: 1.75rem;
+	font-weight: 500;
 }
+
 .gallery .nav {
 	justify-content: center;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	cursor: default;
 	color: #fff;
 	background-color: #585328;
 	border-radius:0 ;
 }
+
 .nav-pills .nav-link {
-	cursor: pointer;
 	color: #000
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
 	padding: 0;
 }
+
 .item-column::after{
 	content: "";
 	display: block;
 	padding-bottom: 100%;
 
 }
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
@@ -130,6 +234,7 @@ body {
 	padding: .5em;
 	cursor: pointer;
 }
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -148,12 +253,16 @@ body {
 	margin: auto;
 	padding-block: 3em;
 }
+
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 2.5rem;
+	margin: 0;
+	margin-bottom: 0.5rem;
 }
+
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
@@ -165,6 +274,7 @@ body {
 	background-color: #A8D5D8 ;
 	position: relative;
 }
+
 #services .container::before{
 	content: ' ';
 	background-color: #1C6474;
@@ -180,7 +290,12 @@ body {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
+}
 
+.service__title {
+	font-size: 1.75rem;
+	font-weight: 500;
+	margin: 0;
 }
 
 .service {
@@ -206,6 +321,7 @@ body {
 #contact .container {
 	display: flex;
 }
+
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -216,10 +332,11 @@ body {
 	right: 0;
 	z-index: -1;
 }
+
 .form-container {
 	flex : 2;
-
 }
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -244,6 +361,7 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
+
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em

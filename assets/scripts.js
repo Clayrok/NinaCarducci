@@ -1,18 +1,4 @@
-$(document).ready(function() {
-    $('.gallery').mauGallery({
-        columns: {
-            xs: 1,
-            sm: 2,
-            md: 3,
-            lg: 3,
-            xl: 3
-        },
-        lightBox: true,
-        lightboxId: 'lightbox',
-        showTags: true,
-        tagsPosition: 'top'
-    });
-
+document.addEventListener("DOMContentLoaded", function() {
     loadImages();
 });
 
@@ -20,7 +6,7 @@ async function loadImages() {
     function loadImagePromise(imgEl) {
         return new Promise(resolve => {
             imgEl.onload = () => {
-                imgEl.classList.remove("visually-hidden");
+                imgEl.classList.remove("differed-img");
                 resolve(imgEl);
             };
 
@@ -28,9 +14,8 @@ async function loadImages() {
         });
     }
 
-    let galleryImgs = $(".gallery .gallery-item").get();
-    galleryImgs = galleryImgs.concat($(".slide-img").get());
-    galleryImgs.forEach(async function (el) {
+    let imgs = document.querySelectorAll(".differed-img");
+    imgs.forEach(async function (el) {
         await loadImagePromise(el);
     });
 }
