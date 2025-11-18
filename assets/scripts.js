@@ -11,6 +11,7 @@ async function loadImages() {
             };
 
             imgEl.src = imgEl.dataset.src.replace(".jpg", "-preview.webp");
+            imgEl.removeAttribute("data-src");
         });
     }
 

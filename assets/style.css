@@ -1,21 +1,36 @@
-@font-face {
-	font-family: 'Spectral';
-	src: url('./fonts/Spectral-Regular.ttf') format('ttf');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
 
-@font-face {
-	font-family: 'Spectral';
-	src: url('./fonts/Spectral-Italic.ttf') format('ttf');
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
+.hidden {
+	display: none !important;
+}
+
+h4 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	unicode-bidi: isolate;
 }
 
 * {
-	position: relative;
 	font-family: 'Inter';
 	font-style: normal;
 	box-sizing: border-box;
@@ -27,7 +42,8 @@ body {
 	margin: auto;
 }
 
-blockquote {
+blockquote,
+figure {
 	margin: 0 0 1rem;
 }
 
@@ -39,7 +55,7 @@ blockquote {
 	visibility: hidden;
 }
 
-.top-header {
+header {
 	background-color: white;
 	position: sticky;
 	top:0;
@@ -51,7 +67,7 @@ blockquote {
 	align-items: center;
 }
 
-.top-header .name {
+header .name {
 	font-size: 26px;
 	font-weight: 500;
 	margin: 0;
@@ -77,6 +93,10 @@ blockquote {
 	width: 20px;
 }
 
+.carousel {
+	position: relative;
+}
+
 .carousel-inner {
 	display: flex;
 	overflow: hidden;
@@ -84,6 +104,10 @@ blockquote {
 
 .carousel-item {
 	display: flex;
+	width: 100%;
+}
+
+.carousel-item img {
 	width: 100%;
 }
 
@@ -123,6 +147,7 @@ button[class^="carousel-control"] {
 }
 
 button[class^="carousel-control"] > img {
+	width: 3.5rem;
 	height: 3.5rem;
 	pointer-events: none;
 	filter: invert(1);
@@ -144,7 +169,7 @@ button[class^="carousel-control"] > img {
 	position: relative;
 }
 
-.picture.left::before {
+#about .picture::before {
 	content: ' ';
 	background-color: #E5975F;
 	width: 374px;
@@ -156,6 +181,8 @@ button[class^="carousel-control"] > img {
 }
 
 .picture {
+	max-width: 95%;
+	aspect-ratio: 1;
 	position: unset;
 	flex: 1;
 	margin: 0 20px;
@@ -183,12 +210,15 @@ button[class^="carousel-control"] > img {
 	font-style: italic;
 	width: 60%;
 	font-size: 1rem;
+	margin: 0;
 	margin-bottom: 0.5rem;
+	line-height: 1.2;
 }
 
 #about-me p {
 	width: 80%;
 	font-size: 14px;
+	line-height: 1.5;
 }
 
 .title{
@@ -196,6 +226,89 @@ button[class^="carousel-control"] > img {
 	padding-block: 2em;
 	font-size: 1.75rem;
 	font-weight: 500;
+}
+
+#categories,
+#categories button {
+	height: 40px;
+}
+
+#categories {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	height: fit-content;
+}
+
+#categories button {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	color: black;
+	padding: 0.5rem 1rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+#categories button.active {
+	background: #594b22;
+	color: white;
+	cursor: default;
+}
+
+#image-viewer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000000b7;
+	z-index: 9999;
+}
+
+#image-viewer button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 0;
+	color: black;
+}
+
+#image-viewer button img {
+	height: 30px;
+	pointer-events: none;
+}
+
+#image-viewer button.previous {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+}
+
+#image-viewer button.next {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	transform: translateY(-50%);
+}
+
+#image-viewer>img {
+	max-width: 80%;
+	max-height: 80%;
 }
 
 .gallery .nav {
@@ -226,10 +339,15 @@ button[class^="carousel-control"] > img {
 
 }
 
-.gallery-item {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gallery img {
+	width: 30%;
+	aspect-ratio: 1;
 	object-fit: cover;
 	padding: .5em;
 	cursor: pointer;
@@ -255,12 +373,13 @@ button[class^="carousel-control"] > img {
 }
 
 .quote__text {
-	font-family: Spectral;
+	font-family: 'Spectral';
 	font-style: italic;
 	font-weight: 300;
-	font-size: 2.5rem;
+	font-size: calc(1.375rem + 1.5vw);
 	margin: 0;
 	margin-bottom: 0.5rem;
+	line-height: 1.2;
 }
 
 .quote__author {
@@ -270,12 +389,15 @@ button[class^="carousel-control"] > img {
 }
 
 #services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin: auto;
 	background-color: #A8D5D8 ;
 	position: relative;
 }
 
-#services .container::before{
+#services::before{
 	content: ' ';
 	background-color: #1C6474;
 	position: absolute;
@@ -289,7 +411,8 @@ button[class^="carousel-control"] > img {
 #services .container {
 	justify-content: space-between;
 	display: flex;
-	padding : 2em 0;
+	padding: 2rem 4rem;
+	max-width: 1425px;
 }
 
 .service__title {
@@ -308,6 +431,10 @@ button[class^="carousel-control"] > img {
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
+}
+
+.service__price h4 {
+	font-size: 1.5rem;
 }
 
 #contact {
@@ -337,6 +464,19 @@ button[class^="carousel-control"] > img {
 	flex : 2;
 }
 
+.form-container h2 {
+	font-size: calc(1.3rem + 0.6vw);
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.form-container p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -344,12 +484,21 @@ form {
 	align-items: flex-start;
 }
 
+form label {
+	line-height: 1.5;
+}
+
 form input {
 	width: 100%;
 	background-color: transparent;
 	border: solid 1px;
 	height: 2.5em;
+	margin: 0;
 	margin-bottom: 20px;
+	padding: 1px 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 form textarea {
@@ -367,10 +516,18 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
-@media all and (max-width: 1180px) {
-	.picture {
-		flex : 2;
+@media (min-width: 1200px) {
+	.quote__text {
+		font-size: 2.5rem;
 	}
+
+	h4,
+	.h4 {
+		font-size: 1.5rem;
+	}
+}
+
+@media all and (max-width: 1180px) {
 	#about, #contact .container {
 		align-items: center;
 	}
@@ -378,7 +535,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h3, #about-me p {
 		width: 100%;
 	}
 }
@@ -388,10 +545,7 @@ input[type="submit"] {
 		flex-direction: column;
 
 	}
-	.picture {
-		width: 50%;
-	}
-	.picture.left::before {
+	#about .picture::before {
 		width: 100%;
 		height: 30%;
 		position: absolute;
@@ -406,18 +560,18 @@ input[type="submit"] {
 	}
 	#services .container {
 		flex-direction: column;
+		gap: 4rem;
 	}
 	.service {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-		margin: 2em 0
 	}
 	.service__description{
 		margin-bottom: 1em;
 	}
 
-	#services .container::before{
+	#services::before{
 		width: 30%;
 		height: 100%;
 		bottom: 0;
@@ -442,21 +596,33 @@ input[type="submit"] {
 	}
 }
 
+@media all and (max-width: 768px) {
+	.gallery img {
+		width: 42%;
+	}
+}
+
+@media all and (max-width: 576px) {
+	.gallery img {
+		width: 99%;
+	}
+}
+
 @media all and (max-width: 650px) {
-	.top-header {
+	header {
 		flex-direction: column;
 		padding-inline: 0;
 	}
-	.top-header .nav, .top-header .nav ul {
+	header .nav, header .nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
 	}
-	.top-header .nav li {
+	header .nav li {
 		flex: 1;
 		padding-block: 1em;
 		text-align: center;
 	}
-	.picture.left::before, .picture.right::before {
+	#about .picture::before, .picture.right::before {
 		height: 150px;
 	}
 	#services .container {
@@ -472,8 +638,4 @@ input[type="submit"] {
 	form {
 		width: 100%;
 	}
-	.picture {
-		width: 80%;
-	}
 }
-
