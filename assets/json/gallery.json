@@ -4,11 +4,13 @@
         "images": [
             {
                 "thumb_src": "./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp",
+                "alt": "Foule dans la fosse à un concert"
             },
             {
                 "thumb_src": "./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp",
+                "alt": "Chanteur sur scène avec de la fumée en arrière plan"
             }
         ]
     },
@@ -17,15 +19,18 @@
         "images": [
             {
                 "thumb_src": "./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp",
+                "alt": "Homme en costume qui croise les bras"
             },
             {
                 "thumb_src": "./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp",
+                "alt": "Femme qui rit assise à son bureau au travail"
             },
             {
                 "thumb_src": "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp",
+                "alt": "Femme qui rit assise devant son ordinateur portable"
             }
         ]
     },
@@ -34,11 +39,13 @@
         "images": [
             {
                 "thumb_src": "./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp",
+                "alt": "Deux paires de mains tendues l'une vers l'autre, qui se touchent du bout des doigts"
             },
             {
                 "thumb_src": "./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp",
+                "alt": "Couple en costume de mariés"
             }
         ]
     },
@@ -47,11 +54,13 @@
         "images": [
             {
                 "thumb_src": "./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp",
+                "alt": "Portrait d'un homme fermant les yeux"
             },
             {
                 "thumb_src": "./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-thumb.webp",
-                "full_size_src": "./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp"
+                "full_size_src": "./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp",
+                "alt": "Portrait d'une femme à lunettes à travers un grillage"
             }
         ]
     }

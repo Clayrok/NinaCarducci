@@ -12,10 +12,10 @@ function initGallery() {
             json.forEach(data => {
                 categoryNames.push(data.category);
 
-                data.images.forEach(image => {
+                data.images.forEach((image, index) => {
                     const img = document.createElement("img");
                     img.src = image.thumb_src;
-                    img.alt = "Photographie";
+                    img.alt = image.alt || `Photographie ${(index + 1)}`;
                     img.dataset.category = data.category;
                     img.dataset.full_size_src = image.full_size_src;
                     img.loading = "lazy";

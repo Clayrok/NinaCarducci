@@ -3,17 +3,140 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<meta name="description" content="Portfolio de la photographe Nina Carducci.">
+	<meta name="description" content="Site de la photographe Nina Carducci qui propose des shootings, de la retouche et des albums photo.">
 	<link rel="stylesheet" href="./assets/gfont.css">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script type="module" src="./assets/scripts.js"></script>
 	<script type="module" src="./assets/carousel.js"></script>
 	<script type="module" src="./assets/gallery.js"></script>
 	<title>Nina Carducci - Photographe</title>
+
+	<!-- Facebook meta tags -->
+	<meta property="og:title" content="Nina Carducci - photographe à Bordeaux">
+	<meta property="og:site_name" content="Nina Carducci - photographe à Bordeaux">
+	<meta property="og:type" content="article">
+	<meta property="og:description"
+		content="Nina Carducci, photographe à Bordeaux vous propose ses services pour un shooting, une retouche ou la création d'un album personnalisé.">
+	<meta property="og:image" content="./assets/images/social-network.webp">
+	<meta property="og:url" content="index.html">
+
+	<!-- Twitter meta tags  -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Nina Carducci - photographe à Bordeaux">
+	<meta name="twitter:description"
+		content="Nina Carducci, photographe à Bordeaux vous propose ses services pour un shooting, une retouche ou la création d'un album personnalisé.">
+	<meta name="twitter:image" content="./assets/images/social-network.webp">
+	<meta name="twitter:image:alt" content="Foule dans la fosse à un concert.">
+
+	<!-- Rich snippets -->
+	<script type="application/ld+json">
+	[
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Nina Carducci Photographe",
+			"image": [
+				"./assets/images/nina.webp",
+				"./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-thumb.webp",
+				"./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-thumb.webp"
+			],
+			"url": "index.html",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "68 avenue Alsace-Lorraine",
+				"postalCode": "33200",
+				"addressLocality": "Bordeaux",
+				"addressCountry": "FR"
+			},
+			"telephone": "0556677889",
+			"openingHours": "Mo,Tu,We,Th,Fr 10:00-19:00",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Services de Photographie",
+				"itemListElement": [
+					{
+						"@type": "OfferCatalog",
+						"name": "Shooting photo"
+					},
+					{
+						"@type": "OfferCatalog",
+						"name": "Retouches"
+					},
+					{
+						"@type": "OfferCatalog",
+						"name": "Album photos"
+					}
+				]
+			},
+			"priceRange": "$$"
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Nina Carducci",
+			"jobTitle": "Photographe",
+			"url": "index.html",
+			"sameAs": [
+				"https://www.instagram.com/ninacarducci.photo/?hl=fr"
+			]
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"name": "Shooting photo",
+			"description": "Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France.",
+			"serviceType": "Photographic Shooting",
+			"provider": {
+				"@type": "Person",
+				"name": "Nina Carducci"
+			},
+			"offers": {
+				"@type": "Offer",
+				"priceCurrency": "EUR",
+				"price": "350",
+				"description": "demi journée, Matériel et déplacement inclus"
+			}
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"name": "Retouches photo",
+			"description": "Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications.",
+			"serviceType": "Photo Retouching",
+			"provider": {
+				"@type": "Person",
+				"name": "Nina Carducci"
+			},
+			"offers": {
+				"@type": "Offer",
+				"priceCurrency": "EUR",
+				"price": "50",
+				"description": "par photo, 2 Allers-Retours inclus"
+			}
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"name": "Création d'Album photos",
+			"description": "Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé.",
+			"serviceType": "Photo Album Creation",
+			"provider": {
+				"@type": "Person",
+				"name": "Nina Carducci"
+			},
+			"offers": {
+				"@type": "Offer",
+				"priceCurrency": "EUR",
+				"price": "400",
+				"description": "album A4, 30 pages recto/verso"
+			}
+		}
+	]
+	</script>
 </head>
 <body>
 	<header>
-		<h1 class="name">Nina Carducci&nbsp;&nbsp;<span id="subtitle">Photographe</span></h1>
+		<h1 class="name">Nina Carducci<br><span id="subtitle">Photographe à Bordeaux</span></h1>
 		<nav class="nav">
 			<ul>
 				<li><a href="#about">Pourquoi la photo ?</a></li>
@@ -30,13 +153,13 @@
 		<div class="carousel-inner">
 			<img src="./assets/images/slider/slide1.webp"
 			srcset="./assets/images/slider/640/slide1.webp 640w, ./assets/images/slider/960/slide1.webp 960w, ./assets/images/slider/1280/slide1.webp 1280w"
-			class="carousel-item active" fetchpriority=high alt="Image de slide">
+			class="carousel-item active" fetchpriority=high alt="Image de slide 1">
 			<img src="./assets/images/slider/slide2.webp"
 			srcset="./assets/images/slider/640/slide2.webp 640w, ./assets/images/slider/960/slide2.webp 960w, ./assets/images/slider/1280/slide2.webp 1280w"
-			class="carousel-item" fetchpriority=high alt="Image de slide">
+			class="carousel-item" fetchpriority=high alt="Image de slide 2">
 			<img src="./assets/images/slider/slide3.webp"
 			srcset="./assets/images/slider/640/slide3.webp 640w, ./assets/images/slider/960/slide3.webp 960w, ./assets/images/slider/1280/slide3.webp 1280w"
-			class="carousel-item" fetchpriority=high alt="Image de slide">
+			class="carousel-item" fetchpriority=high alt="Image de slide 3">
 		</div>
 		<button class="carousel-control-prev pointer" type="button">
 			<img src="assets/icons/chevron_left.svg" alt="Précédent">
@@ -54,7 +177,7 @@
 			<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestinée. La photographie ce n'est pas qu'un boitier et un objectif. C'est capturer un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
 			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 				C’est ce que je vous propose : capturer ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
-			<p>Je propose différentes prestations allant du shooting pour saisir un instant, de la retouche pour sublimer le sujet et des albums photo pour transformer vos plus beaux moments en souvenir matériel.</p>
+			<p>Je propose différentes prestations allant du shooting, de la retouche et des albums photo.</p>
 		</div>
 	</section>
 	<section id="gallery">
