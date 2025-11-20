@@ -7,9 +7,9 @@
 	<link rel="preload" href="./assets/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./assets/gfont.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./assets/fonts/gfonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-	<script type="module" src="./assets/scripts.min.js" defer></script>
-	<script type="module" src="./assets/carousel.min.js" defer></script>
-	<script type="module" src="./assets/gallery.min.js" defer></script>
+	<script type="module" src="./assets/scripts.min.js"></script>
+	<script type="module" src="./assets/carousel.min.js"></script>
+	<script type="module" src="./assets/gallery.min.js"></script>
 	<title>Nina Carducci - Photographe</title>
 
 	<!-- Facebook meta tags -->
@@ -153,14 +153,19 @@
 		<div class="carousel-indicators"></div>
 		<div class="carousel-inner">
 			<img src="./assets/images/slider/slide1.webp"
-			srcset="./assets/images/slider/640/slide1.webp 640w, ./assets/images/slider/960/slide1.webp 960w, ./assets/images/slider/1280/slide1.webp 1280w, ./assets/images/slider/slide1.webp 1900w"
-			class="carousel-item active" fetchpriority=high alt="Image de slide 1">
+				srcset="./assets/images/slider/640/slide1.webp 640w, ./assets/images/slider/960/slide1.webp 960w, ./assets/images/slider/1280/slide1.webp 1280w, ./assets/images/slider/slide1.webp 1900w"
+				sizes="100vw" class="carousel-item active"
+				fetchpriority="high" alt="Image de slide 1">
+			
 			<img src="./assets/images/slider/slide2.webp"
-			srcset="./assets/images/slider/640/slide2.webp 640w, ./assets/images/slider/960/slide2.webp 960w, ./assets/images/slider/1280/slide2.webp 1280w, ./assets/images/slider/slide2.webp 1900w"
-			class="carousel-item" fetchpriority=high alt="Image de slide 2">
+				srcset="./assets/images/slider/640/slide2.webp 640w, ./assets/images/slider/960/slide2.webp 960w, ./assets/images/slider/1280/slide2.webp 1280w, ./assets/images/slider/slide2.webp 1900w"
+				sizes="100vw" class="carousel-item" fetchpriority="high"
+				alt="Image de slide 2">
+			
 			<img src="./assets/images/slider/slide3.webp"
-			srcset="./assets/images/slider/640/slide3.webp 640w, ./assets/images/slider/960/slide3.webp 960w, ./assets/images/slider/1280/slide3.webp 1280w, ./assets/images/slider/slide3.webp 1900w"
-			class="carousel-item" fetchpriority=high alt="Image de slide 3">
+				srcset="./assets/images/slider/640/slide3.webp 640w, ./assets/images/slider/960/slide3.webp 960w, ./assets/images/slider/1280/slide3.webp 1280w, ./assets/images/slider/slide3.webp 1900w"
+				sizes="100vw" class="carousel-item" fetchpriority="high"
+				alt="Image de slide 3">
 		</div>
 		<button class="carousel-control-prev pointer" type="button">
 			<img src="assets/icons/chevron_left.svg" alt="Précédent">
@@ -171,15 +176,16 @@
 	</section>
 	<section id="about">
 		<div class="picture">
-			<img srcset="./assets/images/nina-1000w.webp 1000w, ./assets/images/nina-1216w.webp 1216w, ./assets/images/nina-1550w.webp 1550w"
-			alt="Photo de Nina">
+			<img src="./assets/images/nina-1550w.webp"
+			srcset="./assets/images/nina-1000w.webp 1000w, ./assets/images/nina-1216w.webp 1216w, ./assets/images/nina-1550w.webp 1550w"
+			sizes="1000px" alt="Photo de Nina">
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">Pourquoi la photographie ?</h2>
 			<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestinée. La photographie ce n'est pas qu'un boitier et un objectif. C'est capturer un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
 			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 				C’est ce que je vous propose : capturer ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
-			<p>Je propose différentes prestations allant du shooting, de la retouche et des albums photo.</p>
+			<p>Je propose différentes prestations sur Bordeaux allant du shooting, de la retouche et des albums photo.</p>
 		</div>
 	</section>
 	<section id="gallery">
@@ -206,7 +212,7 @@
 			<div class="service">
 				<div class="service__description">
 					<h3 class="service__title">Shooting photo</h3>
-					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace sur Bordeaux pour réaliser vos photos</p>
 					<p>Offrez vous un moment unique et de magnifiques clichés capturés par une photographe professionnelle.</p>
 				</div>
 				<div class="service__price">
@@ -253,6 +259,14 @@
 			<div class="form-container">
 				<h2>Une question sur mes prestations de photographie ?<br>Une demande de devis ?</h2>
 				<p> N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures</p>
+				<br>
+				<div class="coordonnees">
+					<h3>Coordonnées</h3>
+					<div class="coordonnees-line"><h4>Adresse :</h4>&nbsp;<p>68 avenue Alsace-Lorraine, 33200 Bordeaux</p></div>
+					<div class="coordonnees-line"><h4>Téléphone :</h4>&nbsp;<p>05 56 67 78 89</p></div>
+					<div class="coordonnees-line"><h4>Horaires :</h4>&nbsp;<p>Du Lundi au Vendredi 10h-19h</p></div>
+				</div>
+				<br>
 				<form action="#" method="post">
 					<label for="nom">Nom</label>
 					<input type="text" name="nom" id="nom">
@@ -264,8 +278,9 @@
 				</form>
 			</div>
 			<div class="picture right">
-				<img srcset="./assets/images/camera-1000w.webp 1000w, ./assets/images/camera-1216w.webp 1216w, ./assets/images/camera-1550w.webp 1550w"
-				alt="Appareil photo">
+				<img src="./assets/images/camera-1550w.webp"
+				srcset="./assets/images/camera-1000w.webp 1000w, ./assets/images/camera-1216w.webp 1216w, ./assets/images/camera-1550w.webp 1550w"
+				sizes="1000px" alt="Appareil photo">
 			</div>
 		</div>
 	</section>

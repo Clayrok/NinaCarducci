@@ -444,6 +444,24 @@ button[class^="carousel-control"] > img {
 	line-height: 1.2;
 }
 
+.form-container .coordonnees-line {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	margin-bottom: 1em;
+}
+
+.form-container .coordonnees-line p {
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.form-container h4 {
+	font-size: 1rem;
+	font-weight: 800;
+	margin: 0;
+}
+
 .form-container p {
 	margin-top: 0;
 	margin-bottom: 1rem;
