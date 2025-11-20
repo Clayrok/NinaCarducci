@@ -1,3 +1,5 @@
+import data from "./json/gallery.json" with { type: "json" };
+
 document.addEventListener("DOMContentLoaded", function (e) {
     initGallery();
 });
@@ -5,30 +7,24 @@ document.addEventListener("DOMContentLoaded", function (e) {
 function initGallery() {
     let categoryNames = ["Tous"];
 
-    fetch("./assets/json/gallery.json").then(response => {
-        response.json().then(json => {
-            const gallery = document.querySelector(".gallery");
+    const gallery = document.querySelector(".gallery");
+    data.forEach(categoryData => {
+        categoryNames.push(categoryData.category);
 
-            json.forEach(data => {
-                categoryNames.push(data.category);
+        categoryData.images.forEach((image, index) => {
+            const img = document.createElement("img");
+            img.src = image.thumb_src;
+            img.alt = image.alt || `Photographie ${(index + 1)}`;
+            img.dataset.category = categoryData.category;
+            img.dataset.full_size_src = image.full_size_src;
+            img.loading = "lazy";
+            img.addEventListener("click", onImageClicked);
 
-                data.images.forEach((image, index) => {
-                    const img = document.createElement("img");
-                    img.src = image.thumb_src;
-                    img.alt = image.alt || `Photographie ${(index + 1)}`;
-                    img.dataset.category = data.category;
-                    img.dataset.full_size_src = image.full_size_src;
-                    img.loading = "lazy";
-                    img.addEventListener("click", onImageClicked);
-
-                    gallery.appendChild(img);
-                });
-            });
-
-            initCategories(categoryNames);
+            gallery.appendChild(img);
         });
     });
 
+    initCategories(categoryNames);
     initImageViewer();
 }
 

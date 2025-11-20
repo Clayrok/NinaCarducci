@@ -4,11 +4,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<meta name="description" content="Site de la photographe Nina Carducci qui propose des shootings, de la retouche et des albums photo.">
-	<link rel="stylesheet" href="./assets/gfont.css">
-	<link rel="stylesheet" href="./assets/style.css">
-	<script type="module" src="./assets/scripts.js"></script>
-	<script type="module" src="./assets/carousel.js"></script>
-	<script type="module" src="./assets/gallery.js"></script>
+	<link rel="preload" href="./assets/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="./assets/gfont.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="./assets/fonts/gfonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+	<script type="module" src="./assets/scripts.min.js" defer></script>
+	<script type="module" src="./assets/carousel.min.js" defer></script>
+	<script type="module" src="./assets/gallery.min.js" defer></script>
 	<title>Nina Carducci - Photographe</title>
 
 	<!-- Facebook meta tags -->

@@ -320,30 +320,6 @@ button[class^="carousel-control"] > img {
 	justify-content: center;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	cursor: default;
-	color: #fff;
-	background-color: #585328;
-	border-radius:0 ;
-}
-
-.nav-pills .nav-link {
-	color: #000
-}
-
-.item-column {
-	position: relative;
-	margin-bottom: 0 !important;
-	padding: 0;
-}
-
-.item-column::after{
-	content: "";
-	display: block;
-	padding-bottom: 100%;
-
-}
-
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
@@ -355,17 +331,6 @@ button[class^="carousel-control"] > img {
 	aspect-ratio: 1;
 	object-fit: cover;
 	padding: .5em;
-	cursor: pointer;
-}
-
-.mg-prev, .mg-next {
-	width: 30px;
-	height: 30px;
-	border-radius: 00%;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	font-size: 24px;
 	cursor: pointer;
 }
 
