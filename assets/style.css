@@ -37,6 +37,10 @@ p {
 	scroll-behavior: smooth;
 }
 
+#subtitle {
+	font-size: 0.9rem;
+}
+
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -221,11 +225,12 @@ button[class^="carousel-control"] > img {
 	line-height: 1.5;
 }
 
-.title{
+.title {
 	text-align: center;
 	padding-block: 2em;
 	font-size: 1.75rem;
 	font-weight: 500;
+	z-index: 1;
 }
 
 #categories,
@@ -605,6 +610,10 @@ input[type="submit"] {
 @media all and (max-width: 576px) {
 	.gallery img {
 		width: 99%;
+	}
+
+	.service__title {
+		font-size: 1.5rem;
 	}
 }
 

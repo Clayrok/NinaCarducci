@@ -1,5 +1,6 @@
 const slideDelay = 3000;
 let slideTimeout = null;
+let resizeTimeout = null;
 
 document.addEventListener("DOMContentLoaded", function (e) {
     initCarousel();
@@ -19,6 +20,11 @@ function startSlideTimeout() {
 }
 
 function initEvents() {
+    window.addEventListener("resize", function (e) {
+        this.clearTimeout(resizeTimeout);
+        goToSlide(getCurrentSlideIndex());
+    });
+
     document.querySelectorAll("[class^=carousel-control]").forEach(el => {
         el.addEventListener("click", function (e) {
             const classList = e.target.classList;
@@ -112,4 +118,12 @@ function goToSlide(index) {
     setSelectedIndicator(index);
 
     startSlideTimeout();
+}
+
+function getCurrentSlideIndex() {
+    const carouselItems = document.querySelectorAll(".carousel-item");
+    const activeCarouselItem = document.querySelector(".carousel-item.active");
+
+    const currentIndex = Array.from(carouselItems).indexOf(activeCarouselItem);
+    return currentIndex;
 }
