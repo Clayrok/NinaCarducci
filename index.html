@@ -31,108 +31,40 @@
 
 	<!-- Rich snippets -->
 	<script type="application/ld+json">
-	[
 		{
-			"@context": "https://schema.org",
-			"@type": "LocalBusiness",
-			"name": "Nina Carducci Photographe",
-			"image": [
-				"./assets/images/nina.webp",
-				"./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-thumb.webp",
-				"./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-thumb.webp"
-			],
+			"@context": "http://schema.org",
+			"@type": ["LocalBusiness", "Service"],
+			"name": "Nina Carducci",
+			"description": "Nina Carducci, photographe professionnelle à Bordeaux",
+			"image": "./assets/images/nina-1000w.webp",
 			"url": "index.html",
+			"telephone": "0556677889",
 			"address": {
 				"@type": "PostalAddress",
 				"streetAddress": "68 avenue Alsace-Lorraine",
-				"postalCode": "33200",
 				"addressLocality": "Bordeaux",
+				"postalCode": "33200",
 				"addressCountry": "FR"
+				},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "44.8466732",
+				"longitude": "-0.6065805"
 			},
-			"telephone": "0556677889",
-			"openingHours": "Mo,Tu,We,Th,Fr 10:00-19:00",
-			"hasOfferCatalog": {
-				"@type": "OfferCatalog",
-				"name": "Services de Photographie",
-				"itemListElement": [
-					{
-						"@type": "OfferCatalog",
-						"name": "Shooting photo"
-					},
-					{
-						"@type": "OfferCatalog",
-						"name": "Retouches"
-					},
-					{
-						"@type": "OfferCatalog",
-						"name": "Album photos"
-					}
-				]
+			"openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"lundi",
+					"mardi",
+					"mercredi",
+					"jeudi",
+					"vendredi"
+				],
+				"opens": "10:00",
+				"closes": "19:00"
 			},
-			"priceRange": "$$"
-		},
-		{
-			"@context": "https://schema.org",
-			"@type": "Person",
-			"name": "Nina Carducci",
-			"jobTitle": "Photographe",
-			"url": "index.html",
-			"sameAs": [
-				"https://www.instagram.com/ninacarducci.photo/?hl=fr"
-			]
-		},
-		{
-			"@context": "https://schema.org",
-			"@type": "Service",
-			"name": "Shooting photo",
-			"description": "Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France.",
-			"serviceType": "Photographic Shooting",
-			"provider": {
-				"@type": "Person",
-				"name": "Nina Carducci"
-			},
-			"offers": {
-				"@type": "Offer",
-				"priceCurrency": "EUR",
-				"price": "350",
-				"description": "demi journée, Matériel et déplacement inclus"
-			}
-		},
-		{
-			"@context": "https://schema.org",
-			"@type": "Service",
-			"name": "Retouches photo",
-			"description": "Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications.",
-			"serviceType": "Photo Retouching",
-			"provider": {
-				"@type": "Person",
-				"name": "Nina Carducci"
-			},
-			"offers": {
-				"@type": "Offer",
-				"priceCurrency": "EUR",
-				"price": "50",
-				"description": "par photo, 2 Allers-Retours inclus"
-			}
-		},
-		{
-			"@context": "https://schema.org",
-			"@type": "Service",
-			"name": "Création d'Album photos",
-			"description": "Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé.",
-			"serviceType": "Photo Album Creation",
-			"provider": {
-				"@type": "Person",
-				"name": "Nina Carducci"
-			},
-			"offers": {
-				"@type": "Offer",
-				"priceCurrency": "EUR",
-				"price": "400",
-				"description": "album A4, 30 pages recto/verso"
-			}
+			"priceRange" : "50€ - 400€"
 		}
-	]
 	</script>
 </head>
 <body>
