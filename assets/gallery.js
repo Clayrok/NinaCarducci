@@ -1,10 +1,10 @@
-import data from "./json/gallery.json" with { type: "json" };
+fetch('./assets/json/gallery.json')
+    .then(response => response.json())
+    .then(data => {
+        initGallery(data);
+    });
 
-document.addEventListener("DOMContentLoaded", function (e) {
-    initGallery();
-});
-
-function initGallery() {
+function initGallery(data) {
     let categoryNames = ["Tous"];
 
     const gallery = document.querySelector(".gallery");

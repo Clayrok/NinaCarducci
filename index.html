@@ -4,12 +4,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<meta name="description" content="Site de la photographe Nina Carducci qui propose des shootings, de la retouche et des albums photo.">
+	<link rel="preload" href="./assets/json/gallery.json" as="fetch" crossorigin>
 	<link rel="preload" href="./assets/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./assets/gfont.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./assets/fonts/gfonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
 	<script type="module" src="./assets/scripts.min.js"></script>
 	<script type="module" src="./assets/carousel.min.js"></script>
-	<script type="module" src="./assets/gallery.min.js"></script>
 	<title>Nina Carducci - Photographe</title>
 
 	<!-- Facebook meta tags -->
@@ -216,5 +216,6 @@
 			</div>
 		</div>
 	</section>
+	<script defer src="./assets/gallery.min.js"></script>
 </body>
 </html>
